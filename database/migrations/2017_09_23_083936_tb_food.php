@@ -14,9 +14,11 @@ class TbFood extends Migration
     public function up()
     {
         Schema::create('tb_food', function (Blueprint $table) {
-            $table->increments('ingr_id');
-            $table->string('ingr_name')->unique();
-            $table->text('food_list_id');
+            $table->increments('food_id');
+            $table->text('ingr_list_id');
+            $table->string('food_name');
+            $table->longtext('directions');
+            $table->timestamp('created_at')->nullable();
         });
     }
 

@@ -14,9 +14,9 @@ class TbIngredient extends Migration
     public function up()
     {
         Schema::create('tb_ingredient', function (Blueprint $table) {
-            $table->string('email')->index();
-            $table->string('token');
-            $table->timestamp('created_at')->nullable();
+            $table->increments('ingr_id');
+            $table->string('ingr_name')->unique();
+            $table->text('food_list_id');
         });
     }
 
