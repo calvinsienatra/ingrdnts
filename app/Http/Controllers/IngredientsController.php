@@ -2,15 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Recipe;
+use App\Ingredients;
 use Illuminate\Http\Request;
 
-class RecipeController extends Controller
+class IngredientsController extends Controller
 {
-    public function find($array)
-    {
-        
-    }
     /**
      * Display a listing of the resource.
      *
@@ -45,10 +41,10 @@ class RecipeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Recipe  $recipe
+     * @param  \App\Ingredients  $ingredients
      * @return \Illuminate\Http\Response
      */
-    public function show(Recipe $recipe)
+    public function show(Ingredients $ingredients)
     {
         //
     }
@@ -56,10 +52,10 @@ class RecipeController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Recipe  $recipe
+     * @param  \App\Ingredients  $ingredients
      * @return \Illuminate\Http\Response
      */
-    public function edit(Recipe $recipe)
+    public function edit(Ingredients $ingredients)
     {
         //
     }
@@ -68,10 +64,10 @@ class RecipeController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Recipe  $recipe
+     * @param  \App\Ingredients  $ingredients
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Recipe $recipe)
+    public function update(Request $request, Ingredients $ingredients)
     {
         //
     }
@@ -79,10 +75,10 @@ class RecipeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Recipe  $recipe
+     * @param  \App\Ingredients  $ingredients
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Recipe $recipe)
+    public function destroy(Ingredients $ingredients)
     {
         //
     }

@@ -10,7 +10,20 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Recipe;
+use App\Ingredients;
 
 Route::get('/', function () {
-    return view('main');
+		$ingrs = Ingredients::all();
+		$data = [
+			'ingrs' => $ingrs
+		];
+    return view('main', $data);
 });
+
+Route::post('/find', function() {
+	$ingr = request()->only(['ingr_list']);
+	dd($ingr);
+});
+
+//Route::get('/find', 'RecipeController@find');

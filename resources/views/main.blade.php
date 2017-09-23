@@ -35,19 +35,15 @@
             </div>
             <div class="row" style="margin: 0 auto;">
                 <div class="col-lg-6 col-lg-offset-3">
-                    <form method="POST" action="/check">
+                    <form method="POST" action="/find">
                         {{ csrf_field() }}
                         
-                        <select class="demo" multiple>
-                          <option value="1">Onion</option>
-                          <option value="2">Leek</option>
-                          <option value="3">Eggs</option>
-                          <option value="4">Beef</option>
-                          <option value="5">Chicken</option>
-                          <option value="6">Turkey</option>
-                          <option value="7">Rice</option>
-                          <option value="8">Something</option>
+                        <select class="ingr" name="ingr_list[]" multiple>
+                            @foreach($ingrs as $ingr)
+                            <option value="{{$ingr->ingr_id}}">{{$ingr->ingr_name}}</option>
+                            @endforeach
                         </select>
+
                         <input type="submit" class="btn btn-primary" value="Get me them recipes!" style="display: block; margin: 0 auto;">
                     </form>
                 </div>
@@ -68,7 +64,7 @@
         </div>
         
         <script type="text/javascript">
-            $('.demo').tokenize2();
+            $('.ingr').tokenize2();
         </script>
     </body>
 </html>
