@@ -28,36 +28,42 @@
     </head>
     <body>
         <div class="container">
-            <div class="row" style="width: 100%; margin-bottom: 1em;">
-                <h1 style="text-align: center;">Ingrdnts</h1>
+            <div class="row" style="margin-bottom: 1em;">
+                <div class="col-lg-2 col-lg-offset-5">
+                    <h1 style="text-align: center;">Ingrdnts</h1>
+                </div>
             </div>
-            <div class="row" style="width: 40%; display: block; margin: 0 auto;">
-                <form method="POST" action="/check">
-                    {{ csrf_field() }}
-                    
-                    <select class="demo" multiple>
-                      <option value="1">Onion</option>
-                      <option value="2">Leek</option>
-                      <option value="3">Eggs</option>
-                      <option value="4">Beef</option>
-                      <option value="5">Chicken</option>
-                      <option value="6">Turkey</option>
-                      <option value="7">Rice</option>
-                      <option value="8">Something</option>
-                    </select>
-
-                </form>
+            <div class="row" style="margin: 0 auto;">
+                <div class="col-lg-6 col-lg-offset-3">
+                    <form method="POST" action="/check">
+                        {{ csrf_field() }}
+                        
+                        <select class="demo" multiple>
+                          <option value="1">Onion</option>
+                          <option value="2">Leek</option>
+                          <option value="3">Eggs</option>
+                          <option value="4">Beef</option>
+                          <option value="5">Chicken</option>
+                          <option value="6">Turkey</option>
+                          <option value="7">Rice</option>
+                          <option value="8">Something</option>
+                        </select>
+                        <input type="submit" class="btn btn-primary" value="Get me them recipes!" style="display: block; margin: 0 auto;">
+                    </form>
+                </div>
             </div>
-            <div class="row" style="width: 40%; margin: 0 auto;">
-                <h2>Recipes</h2>
-                <ul>
-                    <li>
-                        <font style="font-size: 1.5em;">Something delicious!</font>
-                    </li>
-                    <li>
-                        <font style="font-size: 1.5em;">Another delicious food!</font>
-                    </li>
-                </ul>
+            <div class="row" style="margin: 0 auto;">
+                <div class="col-lg-6 col-lg-offset-3">
+                    <h2>Recipes</h2>
+                    <ul>
+                        <li>
+                            <font style="font-size: 1.5em;">Something delicious!</font>
+                        </li>
+                        <li>
+                            <font style="font-size: 1.5em;">Another delicious food!</font>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
         
