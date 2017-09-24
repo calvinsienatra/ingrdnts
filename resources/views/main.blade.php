@@ -33,7 +33,7 @@
             </div>
             <div class="row" style="margin-bottom: 1.5em;">
                 <div class="col-lg-6 col-lg-offset-3">
-                    <font style="text-align: center; display: block;">Tell us what you have left and we will show what you can make!</font>
+                    <font style="text-align: center; display: block;">Tell us what's in your fridge and we'll help you figure out what to make!</font>
                 </div>
             </div>
             <div class="row" style="margin: 0 auto;">
@@ -54,9 +54,13 @@
                 <div class="col-lg-6 col-lg-offset-3" id="display-recipes">
                 </div>
             </div>
+            <div class="row" style="margin-top: 2em; margin-bottom: 1em;">
+                <font style="text-align: center; display: block;">exclusively developed by. Calvin & Gerald</font>
+            </div>
         </div>
         <script type="text/javascript">
             $(document).on('click','#submit',function(){
+                $('#display-recipes').html('');
                 var dataId = $(this).data("id");
                 var ingr_list = $('#ingr').val();
                 var ingr_list_length = ingr_list.length;

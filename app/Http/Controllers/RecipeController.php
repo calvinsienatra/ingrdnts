@@ -42,8 +42,6 @@ class RecipeController extends Controller
             $new = [];
             $ingr_need = $recipe->ingr_list_id;
 
-            
-
             //Decode array
             foreach (json_decode($ingr_need) as $value) 
             $new[] = $value;
@@ -70,7 +68,7 @@ class RecipeController extends Controller
             }
         }
         if(!empty($recipes_array)){
-            $final_recipes = Recipe::where('food_id', $recipes_array)->get();
+            $final_recipes = Recipe::whereIn('food_id', $recipes_array)->get();
         }else{
             $final_recipes = null;
         }
@@ -80,80 +78,5 @@ class RecipeController extends Controller
         ];
 
         return response()->json(['success' => true, 'data'=>$recipes_array, 'final'=>$final_recipes, 'html'=> view('recipe', $data)->render()]);
-    }
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Recipe  $recipe
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Recipe $recipe)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Recipe  $recipe
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Recipe $recipe)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Recipe  $recipe
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Recipe $recipe)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Recipe  $recipe
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Recipe $recipe)
-    {
-        //
     }
 }
