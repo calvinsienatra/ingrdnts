@@ -72,17 +72,17 @@
     Tokenize2.DEFAULTS = {
         tokensMaxItems: 0,
         tokensAllowCustom: false,
-        dropdownMaxItems: 10,
-        searchMinLength: 0,
-        searchFromStart: true,
+        dropdownMaxItems: 5,
+        searchMinLength: 2,
+        searchFromStart: false,
         searchHighlight: true,
-        displayNoResultsMessage: false,
+        displayNoResultsMessage: true,
         noResultsMessageText: 'No results mached "%s"',
         delimiter: ',',
         dataSource: 'select',
         debounce: 0,
         placeholder: false,
-        sortable: false,
+        sortable: true,
         zIndexMargin: 500,
         tabIndex: 0
     };

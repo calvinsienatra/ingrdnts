@@ -21,9 +21,9 @@ Route::get('/', function () {
     return view('main', $data);
 });
 
-Route::post('/find', function() {
-	$ingr = request()->only(['ingr_list']);
-	dd($ingr);
-});
+Route::post('/find', 'RecipeController@find');
+Route::get('/recipes', 'RecipeController@recipe');
+
+Route::get('/test', 'Recipecontroller@test');
 
 //Route::get('/find', 'RecipeController@find');

@@ -18,6 +18,8 @@ class TbFood extends Migration
             $table->text('ingr_list_id');
             $table->string('food_name');
             $table->longtext('directions');
+            $table->text('picture_link');
+            $table->text('ingr_details');
             $table->timestamp('created_at')->nullable();
         });
     }
