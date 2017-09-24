@@ -7,10 +7,10 @@ if(!empty($recipes_array)){
 		?>
 
 
-<a href="#" data-toggle="modal" data-target="#modal{{$row->food_id}}">
-	<div class="column" class="food_pic" style="display: inline-block;">
+<a href="#" data-toggle="modal" data-target="#modal{{$row->food_id}}" style="margin: 0 auto; display: block; text-align: center;">
+	<div class="column" class="food_pic" style="display: block; margin: 0 auto;">
 		<h2>{{ $row->food_name }}</h2>
-		<img class="food_pic" src="{{ $row->picture_link }}"/>
+		<img class="food_pic" style="max-width: 100%;" src="{{ $row->picture_link }}"/>
 	</div>
 </a>
 
@@ -24,7 +24,7 @@ if(!empty($recipes_array)){
         <h2 class="modal-title">{{$row->food_name}}</h2>
       </div>
       <div class="modal-body">
-      	<img style="margin: 0 auto; display: block;" src="{{$row->picture_link}}"/>
+      	<img style="margin: 0 auto; display: block; max-width: 100%;" src="{{$row->picture_link}}"/>
         <h3>Ingredients</h3>
         <ul>
         	<?php
